@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="header">
+<h2>Sentiment Classification using Tensorflow</h2>
+<p>Deep Learning Model trained on 50K IMDB reviews to classify sentiment</p>
+</div>
+&nbsp;
+
+<center>
+<form action="{{ url_for('predict')}}" method="post">
+<textarea name="Review" placeholder="Enter the review...." cols="78" rows="10" style="border:3px solid #000000;">
+</textarea>
+
+<br />
+<button id="sub" type="submit " class="button">Calculate</button>
+</form>
+        <br><br><h3>{{ prediction_texts }}</h3>
+    </div>
+</center>
+<style>
+#header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+h3 {color:maroon;}
+
+</style>
+
+</body>
+
+</html>
+
